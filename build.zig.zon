@@ -2,5 +2,10 @@
     .name = "wgsl_preprocessor",
     .version = "0.0.0",
     .dependencies = .{},
-    .paths = .{""},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "README.md",
+    },
 }

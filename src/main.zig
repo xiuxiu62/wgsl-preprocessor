@@ -1,11 +1,11 @@
 const std = @import("std");
 
-const ShaderError = error{
+pub const ShaderError = error{
     CyclicDependency,
     ShaderNotFound,
 };
 
-const ShaderInfo = struct {
+pub const ShaderInfo = struct {
     name: []const u8,
     path: []const u8,
     dependencies: []const []const u8,
@@ -73,7 +73,7 @@ const ShaderInfo = struct {
     }
 };
 
-const ShaderGraph = struct {
+pub const ShaderGraph = struct {
     allocator: std.mem.Allocator,
     nodes: std.StringHashMap(ShaderInfo),
     sorted_order: std.ArrayList([]const u8),
